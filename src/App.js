@@ -16,7 +16,7 @@ class Todo extends React.Component{
       tasklist:[],
       text:"",
       date:"",
-      isToggleOn: true
+      disabled:false
     };
     this.addTask = this.addTask.bind(this);
     this.displayText=this.displayText.bind(this);
