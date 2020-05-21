@@ -13,13 +13,20 @@ export default function App() {
   }
 
   const add = (iname) => {
-    
     setToDo((newList) => {
-      if(this.newlist.name.every(todo => todo.name !== iname)){
+      for(let i = 0; i<newList.length; i++){
+        console.log(i);
+        console.log(newList[i].name)
+        console.log(iname)
+        if(newList[i].name === iname){
+          alert("The task name is already their in the list.");
+          return[...newList];
+        }
+      }
       return[
         ...newList,
         {name : iname, checked: false, date: new Date()}
-      ]}
+      ]
     });
   }
   return (
